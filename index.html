@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A low-bandwidth, accessible public-service prototype." />
+    <title>Parivahan Services — Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+      <div class="identity-ribbon">
+        <div class="container ribbon-content">
+          <a class="brand" href="#top" aria-label="Parivahan Services home">
+            <span class="emblem-concept" aria-hidden="true">◆</span>
+            <span class="identity-copy"><small>Government of India · Ministry of Road Transport &amp; Highways</small><strong>PARIVAHAN</strong></span>
+          </a>
+          <nav aria-label="Utility navigation">
+            <a href="#help">Help centre</a>
+            <a href="#status">Check status</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <button class="accessibility-trigger" id="accessibility-trigger" aria-expanded="false" aria-controls="accessibility-menu">
+      <span aria-hidden="true">♿</span><span>Accessibility</span>
+    </button>
+    <aside class="accessibility-menu" id="accessibility-menu" aria-label="Accessibility settings" hidden>
+      <div class="menu-heading"><strong>Accessibility</strong><button class="icon-button" id="close-accessibility" aria-label="Close accessibility menu">×</button></div>
+      <p>Changes apply immediately on this page.</p>
+      <div class="setting-row"><span>Text size</span><div class="button-group" aria-label="Text size"><button data-text-size="small">A−</button><button data-text-size="normal" class="selected">A</button><button data-text-size="large">A+</button></div></div>
+      <label class="toggle"><input id="contrast-toggle" type="checkbox" /><span>High contrast</span></label>
+      <label class="toggle"><input id="reading-toggle" type="checkbox" /><span>Easy reading mode</span></label>
+      <label class="select-label" for="language-select">Language<select id="language-select"><option value="English">English</option><option value="हिंदी">हिंदी</option></select></label>
+    </aside>
+
+    <main id="main-content">
+      <section class="quick-section top-quick-section" id="status" aria-labelledby="quick-title"><div class="container"><div class="section-heading"><div><p class="eyebrow">QUICK ACTIONS</p><h2 id="quick-title">Check, pay or get help</h2></div><p class="section-note">Common tasks, without extra navigation.</p></div><div class="tabs" role="tablist" aria-label="Quick action categories"><button role="tab" aria-selected="true" aria-controls="tab-status" id="status-tab">Track &amp; check</button><button role="tab" aria-selected="false" aria-controls="tab-payments" id="payments-tab">Payments</button><button role="tab" aria-selected="false" aria-controls="tab-support" id="support-tab">Help &amp; support</button></div><div class="tab-panel" role="tabpanel" id="tab-status" aria-labelledby="status-tab"><a href="#application">Track an application <span>→</span></a><a href="#licence-status">Check licence status <span>→</span></a><a href="#vehicle-details">View vehicle details <span>→</span></a></div><div class="tab-panel" role="tabpanel" id="tab-payments" aria-labelledby="payments-tab" hidden><a href="#challan-payment">Pay a challan <span>→</span></a><a href="#receipt">Find a payment receipt <span>→</span></a><a href="#refund">Check a refund <span>→</span></a></div><div class="tab-panel" role="tabpanel" id="tab-support" aria-labelledby="support-tab" hidden><a href="#help">Service guides <span>→</span></a><a href="#complaint">Raise a concern <span>→</span></a><a href="#contact">Contact support <span>→</span></a></div></div></section>
+      <section class="hero" id="top">
+        <div class="container">
+          <p class="eyebrow">ONE PLACE FOR ROAD TRANSPORT SERVICES</p>
+          <h1>What do you need help with?</h1>
+          <p class="hero-copy">Choose a service to start. Simple steps, clear requirements and saveable progress.</p>
+          <form class="service-search" role="search">
+            <label class="sr-only" for="service-search-input">Search for a service</label>
+            <input id="service-search-input" type="search" placeholder="Search driving licence, challan, vehicle registration…" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="alerts-section" aria-labelledby="alerts-title">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">PLEASE READ</p><h2 id="alerts-title">Important alerts &amp; advisories</h2></div><a href="#all-alerts">View all alerts</a></div>
+          <div class="alert-grid">
+            <article class="alert-card urgent"><span class="alert-label">Important</span><h3>Never share OTPs or payment details</h3><p>Official services will not ask for an OTP over a phone call or message.</p><a href="#safe-services">Learn how to stay safe →</a></article>
+            <article class="alert-card"><span class="alert-label">Service update</span><h3>Know the documents before you apply</h3><p>See the documents and estimated time before starting your request.</p><a href="#documents">Check requirements →</a></article>
+            <article class="alert-card"><span class="alert-label">Road safety</span><h3>Drive only with valid documents</h3><p>Keep your licence, registration and insurance current before travel.</p><a href="#road-safety">View safety guidance →</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section" aria-labelledby="services-title">
+        <div class="container"><div class="section-heading"><div><p class="eyebrow">START A SERVICE</p><h2 id="services-title">Choose your service area</h2></div><p class="section-note">Each journey shows only the next useful step.</p></div>
+          <div class="service-grid">
+            <article class="service-card"><div class="service-icon" aria-hidden="true">DL</div><h3>Driver services</h3><p>Apply for, renew or manage a driving licence.</p><ul><li><a href="#licence">Learner's licence &amp; online test</a></li><li><a href="#licence">Driving licence services</a></li><li><a href="#school">Find a driving school</a></li></ul><button class="primary-button" data-service="Driver services">Explore driver services</button></article>
+            <article class="service-card"><div class="service-icon" aria-hidden="true">VH</div><h3>Vehicle services</h3><p>Register, transfer or check details for a vehicle.</p><ul><li><a href="#vehicle">Vehicle registration</a></li><li><a href="#vehicle">Transfer ownership</a></li><li><a href="#challan">Check challan status</a></li></ul><button class="primary-button" data-service="Vehicle services">Explore vehicle services</button></article>
+            <article class="service-card"><div class="service-icon" aria-hidden="true">MF</div><h3>Manufacturer services</h3><p>Services for dealers, manufacturers and testing agencies.</p><ul><li><a href="#manufacturer">Dealer services</a></li><li><a href="#manufacturer">Vehicle approval</a></li><li><a href="#manufacturer">Trade certificate</a></li></ul><button class="primary-button" data-service="Manufacturer services">Explore manufacturer services</button></article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="help">
+      <div class="footer-main"><div class="container footer-grid">
+        <section><h2>Parivahan Services</h2><p>An independent concept for a hackathon, designed to make public transport services faster and easier to use.</p><p class="prototype-note">Not an official Government of India website. Uses mock data only.</p></section>
+        <section><h2>Quick links</h2><ul><li><a href="#status">Application status</a></li><li><a href="#challan-payment">eChallan services</a></li><li><a href="#licence">Driving licence services</a></li><li><a href="#vehicle">Vehicle services</a></li><li><a href="#complaint">Raise a concern</a></li></ul></section>
+        <section><h2>Site map</h2><ul><li><a href="#top">Home</a></li><li><a href="#alerts-title">Alerts &amp; advisories</a></li><li><a href="#services-title">Service areas</a></li><li><a href="#help">Help centre</a></li><li><a href="#accessibility-trigger">Accessibility</a></li></ul></section>
+        <section><h2>Related public platforms</h2><ul><li><a href="https://morth.nic.in/" target="_blank" rel="noopener">Ministry of Road Transport &amp; Highways ↗</a></li><li><a href="https://www.nic.in/" target="_blank" rel="noopener">National Informatics Centre ↗</a></li><li><a href="https://www.india.gov.in/" target="_blank" rel="noopener">National Portal of India ↗</a></li><li><a href="https://web.umang.gov.in/landing/" target="_blank" rel="noopener">UMANG ↗</a></li></ul></section>
+      </div></div>
+      <div class="footer-partners"><div class="container"><p>Public-service ecosystem</p><div class="partner-badges" aria-label="Related public institutions"><span>Ministry of Road Transport &amp; Highways</span><span>National Informatics Centre</span><span>Digital India</span><span>National Portal of India</span></div></div></div>
+      <div class="footer-legal"><div class="container"><span>© 2026 Parivahan Services prototype</span><span>Content is illustrative; no government affiliation or endorsement is claimed.</span></div></div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="script.js"></script>
+  </body>
+</html>
